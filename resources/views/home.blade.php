@@ -8,13 +8,19 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    You are logged in!
+                        <div class="list-group">
+                        <a href="{{ route('get-medical-prescription') }}" class="list-group-item list-group-item-action">Generate a Prescription</a>
+                    </div>
+    
+                    {{-- <div class="list-group">
+                        <a href="" class="list-group-item list-group-item-action"></a>
+                    </div> --}}
+     
+                    
+                    
+                        </div>
+                    
                 </div>
             </div>
         </div>
