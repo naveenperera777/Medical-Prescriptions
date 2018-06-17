@@ -8,23 +8,20 @@ Medical Prescriptions
  <div class="jumbotron">
      <div class="row">
          <div class="col-md-8 offset-2">
-             <form method="post" action="{{ route('get-medical-prescription') }}" enctype="multipart/form-data">
-
-                 @csrf
-
+             <form method="post" action="{{route('get-medical-prescription')}}">
+                @csrf
                  <div class="row">
                      <div class="col-6">
                          <div class="form-group">
                              <label for="fname"><strong>First Name</strong></label>
                              <input type="text" class="form-control" id="fname" name="fname">
-
                          </div>
                      </div>
 
                      <div class="col-6">
                          <div class="form-group">
                              <label for="degree"><strong>Last Name</strong></label>
-                             <input type="text" class="form-control" id="fname" name="fname">
+                             <input type="text" class="form-control" id="lname" name="lname">
 
                          </div>
                      </div>
@@ -33,7 +30,7 @@ Medical Prescriptions
                      <div class="col-5">
                          <div class="form-group">
                              <label for="degree"><strong>Age</strong></label>
-                             <input type="text" class="form-control" id="degree" name="degree" >
+                             <input type="text" class="form-control" id="age" name="age" >
 
                          </div>
                      </div>
@@ -41,7 +38,7 @@ Medical Prescriptions
                      <div class="col-4">
                          <div class="form-group">
                              <label for="course_id"><strong>Gender</strong></label>
-                             <input type="text" class="form-control" id="course_id" name="course_id">
+                             <input type="text" class="form-control" id="gender" name="gender">
                          </div>
                      </div>
 
@@ -74,7 +71,7 @@ Medical Prescriptions
                      <div class="col-12">
                          <div class="form-group">
                              <label for="causes"><strong>Diagnosis</strong></label>
-                             <textarea type="text" class="form-control" id="causes" name="causes"></textarea>
+                             <textarea type="text" class="form-control" id="diagnosis" name="diagnosis"></textarea>
 
                          </div>
                      </div>
