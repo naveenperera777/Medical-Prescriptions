@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/Prescriptions', 'PrescriptionController@getPrescription')->name('get-medical-prescription');
 
+Route::post('/Prescriptions', 'PrescriptionController@storePrescriptions')->name('get-medical-prescription');
+

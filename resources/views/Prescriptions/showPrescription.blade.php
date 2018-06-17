@@ -8,7 +8,7 @@ Medical Prescriptions
  <div class="jumbotron">
      <div class="row">
          <div class="col-md-8 offset-2">
-             {{-- <form method="post" action="{{ route('submit-medical') }}" enctype="multipart/form-data"> --}}
+             <form method="post" action="{{ route('get-medical-prescription') }}" enctype="multipart/form-data">
 
                  @csrf
 
@@ -226,8 +226,9 @@ Medical Prescriptions
                                         </div>  
                                </div>
 
-             <a href=""><button class="btn btn-primary">Generate PDF</button></a>
-
+             {{-- <a href=""><button class="btn btn-primary">Generate PDF</button></a> --}}
+             <button type="submit" class="btn btn-primary">Submit</button>
+             </form>
          </div>
      </div>
  </div>
