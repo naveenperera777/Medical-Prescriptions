@@ -23,3 +23,8 @@ Route::get('/Prescriptions', 'PrescriptionController@getPrescription')->name('ge
 
 Route::post('/Prescriptions', 'PrescriptionController@storePrescriptions')->name('get-medical-prescription');
 
+
+Route::get('/Prescriptions/{id}', 'PrescriptionController@generatePrescription')->name('generate-prescription');
+
+
+// Route::get( '/student/store-medical/generate-medical/{id}', 'StudentController@generateMedicalPDF' )->name( 'generate-medical' );

@@ -224,8 +224,8 @@ Generate Report
                                         </div>  
                                </div>
 
-             <a href=""><button class="btn btn-primary">Generate PDF</button></a>
-             
+            <a href="{{route('generate-prescription',['id' => $lastID])}}"><button class="btn btn-primary">Generate PDF</button></a>
+                          
              </form>
          </div>
      </div>
