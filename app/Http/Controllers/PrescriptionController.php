@@ -12,7 +12,7 @@ class PrescriptionController extends Controller
         return view('Prescriptions.showPrescription');
     }
 
-    public function storePrescriptions(){
+    public function storePrescriptions(Request $request){
 
 
         return view('Prescriptions.PrescriptionReport');
