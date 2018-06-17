@@ -14,7 +14,7 @@ class PrescriptionController extends Controller
     }
 
     public function storePrescriptions(Request $request){
-        // dd($request->fname);
+        
         $report = new patient();
         $report->first_name = $request->fname;
         $report->last_name = $request->lname;
@@ -24,7 +24,11 @@ class PrescriptionController extends Controller
         $report->remarks = $request->remarks;
         $report->save();
 
-        return view('Prescriptions.PrescriptionReport');
+        $lastInsertedID = $report->id;
+        $prescription= patient::find( $lastInsertedID );
+            
+        return view('Prescriptions.PrescriptionReport',['lastID'=>$lastInsertedID,
+                                                         'prescription'=>$prescription]);
     }
 
 }
