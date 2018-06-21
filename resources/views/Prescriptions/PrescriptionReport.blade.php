@@ -78,14 +78,14 @@ Generate Report
                                     </select>
                             </div>
                         </div>                     
-   {{dd($drugReport->brand)}}
+   {{-- {{dd)}} --}}
                         <div class="col-3">
                             <div class="form-group">
                                 <label for="course_id"><strong>Prefered Brand</strong></label>
                                 <select class="form-control" id="brand" name="brand">
-                                        <option>Choose</option>
+                                        {{-- <option>Choose</option> --}}
                                         {{-- @foreach($courses as $course) --}}
-                                <option value="{{$drugReport->brand}}">{{$drugReport->Brand}}</option>
+                                <option value="{{$drugReport->brand}}">{{$drugReport->brand}}</option>
                                         {{-- @endforeach --}}
                                     </select>
                             </div>
