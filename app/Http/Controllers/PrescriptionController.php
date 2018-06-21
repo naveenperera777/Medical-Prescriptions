@@ -30,14 +30,14 @@ class PrescriptionController extends Controller
             
         return view('Prescriptions.PrescriptionReport',['lastID'=>$lastInsertedID,
                                                          'prescription'=>$prescription]);
+
+                                                         
     }
     
     public function generatePrescription($id){
 
         $prescription = patient::find($id);
-		// $userid  = Auth::user()->id;
-		// $student = Student::where( 'user_id', '=', $userid )->first();
-
+		
 		$pdf = PDF::loadView( 'Prescriptions/convertedPdf', compact('prescription'));
 
 		return $pdf->download( 'Prescriptions.pdf' );
