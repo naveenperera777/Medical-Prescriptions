@@ -43,30 +43,9 @@ Generate Report
                          </div>
                      </div>
 
-                     {{-- <div class="col-4">
-                         <label for="name"><strong>Semester</strong></label>
-                         <input type="text" class="form-control" id="registration" name="registration">
-                     </div> --}}
-
-
-
-
+                    
                  </div>
                  <div class="row">
-
-
-                     {{-- <div class="col-4">
-                         <div class="form-group">
-                             <label for="course_id"><strong>Course ID</strong></label>
-                             <input type="text" class="form-control" id="course_id" name="course_id">
-                         </div>
-                     </div>
-
-                     <div class="col-4">
-                         <label for="name"><strong>Registration Number</strong></label>
-                         <input type="text" class="form-control" id="registration" name="registration">
-                     </div> --}}
-
 
 
                      <div class="col-12">
@@ -99,14 +78,14 @@ Generate Report
                                     </select>
                             </div>
                         </div>                     
-   
+   {{dd($drugReport->brand)}}
                         <div class="col-3">
                             <div class="form-group">
                                 <label for="course_id"><strong>Prefered Brand</strong></label>
                                 <select class="form-control" id="brand" name="brand">
                                         <option>Choose</option>
                                         {{-- @foreach($courses as $course) --}}
-                                            <option value=""></option>
+                                <option value="{{$drugReport->brand}}">{{$drugReport->Brand}}</option>
                                         {{-- @endforeach --}}
                                     </select>
                             </div>
@@ -132,97 +111,7 @@ Generate Report
                                     </div>
                                 </div>  
                        </div>
-
-                       <div class="row">
-                            <div class="col-3">
-                                <div class="form-group">
-                                    <label for="degree"><strong>Generic Name</strong></label>
-                                    <select class="form-control" id="generic" name="generic">
-                                            <option>Choose</option>
-                                            {{-- @foreach($courses as $course) --}}
-                                                <option value=""></option>
-                                            {{-- @endforeach --}}
-                                        </select>
-                                </div>
-                            </div>                     
-       
-                            <div class="col-3">
-                                <div class="form-group">
-                                    <label for="course_id"><strong>Prefered Brand</strong></label>
-                                    <select class="form-control" id="brand" name="brand">
-                                            <option>Choose</option>
-                                            {{-- @foreach($courses as $course) --}}
-                                                <option value=""></option>
-                                            {{-- @endforeach --}}
-                                        </select>
-                                </div>
-                            </div>
-       
-                             <div class="col-2">
-                                <label for="name"><strong>Quantity</strong></label>
-                                <input type="text" class="form-control" id="qty" name="qty">
-                            </div> 
-                            <div class="col-2">
-                                    <label for="name"><strong>Mg</strong></label>
-                                    <input type="text" class="form-control" id="mg" name="mg">
-                                </div> 
-                                <div class="col-2">
-                                        <div class="form-group">
-                                            <label for="Method"><strong>Method</strong></label>
-                                            <select class="form-control" id="method" name="method">
-                                                    <option>Choose</option>
-                                                    {{-- @foreach($courses as $course) --}}
-                                                        <option value=""></option>
-                                                    {{-- @endforeach --}}
-                                                </select>
-                                        </div>
-                                    </div>  
-                           </div>
-                           <div class="row">
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="degree"><strong>Generic Name</strong></label>
-                                        <select class="form-control" id="generic" name="generic">
-                                                <option>Choose</option>
-                                                {{-- @foreach($courses as $course) --}}
-                                                    <option value=""></option>
-                                                {{-- @endforeach --}}
-                                            </select>
-                                    </div>
-                                </div>                     
-           
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="course_id"><strong>Prefered Brand</strong></label>
-                                        <select class="form-control" id="brand" name="brand">
-                                                <option>Choose</option>
-                                                {{-- @foreach($courses as $course) --}}
-                                                    <option value=""></option>
-                                                {{-- @endforeach --}}
-                                            </select>
-                                    </div>
-                                </div>
-           
-                                 <div class="col-2">
-                                    <label for="name"><strong>Quantity</strong></label>
-                                    <input type="text" class="form-control" id="qty" name="qty">
-                                </div> 
-                                <div class="col-2">
-                                        <label for="name"><strong>Mg</strong></label>
-                                        <input type="text" class="form-control" id="mg" name="mg">
-                                    </div> 
-                                    <div class="col-2">
-                                            <div class="form-group">
-                                                <label for="Method"><strong>Method</strong></label>
-                                                <select class="form-control" id="method" name="method">
-                                                        <option>Choose</option>
-                                                        {{-- @foreach($courses as $course) --}}
-                                                            <option value=""></option>
-                                                        {{-- @endforeach --}}
-                                                    </select>
-                                            </div>
-                                        </div>  
-                               </div>
+{{--  --}}
 
             <a href="{{route('generate-prescription',['id' => $lastID])}}"><button class="btn btn-primary">Generate PDF</button></a>
                           
