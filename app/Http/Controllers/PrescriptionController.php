@@ -51,8 +51,9 @@ class PrescriptionController extends Controller
     public function generatePrescription($id){
 
         $prescription = patient::find($id);
+        $drugs = PatientPrescription::where('patient_id','=', $prescription->id )->first();
 		
-		$pdf = PDF::loadView( 'Prescriptions/convertedPdf', compact('prescription'));
+		$pdf = PDF::loadView( 'Prescriptions/convertedPdf', compact('prescription','drugs'));
 
 		return $pdf->download( 'Prescriptions.pdf' );
         

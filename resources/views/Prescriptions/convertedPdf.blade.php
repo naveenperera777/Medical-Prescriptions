@@ -16,8 +16,16 @@
                             <br>
 
                                 <div class="form-group">
-                                    <label for="gender"><strong>Course ID: </strong></label>
+                                    <label for="gender"><strong>Gender: </strong></label>
                                     {{$prescription->gender}}
+                                </div>
+                           <br>
+
+                           <br>
+
+                                <div class="form-group">
+                                    <label for="brand"><strong>Brand: </strong></label>
+                                    {{$drugs->brand}}
                                 </div>
                            <br>
 
@@ -57,10 +65,10 @@
                                     <label for="remarks"><strong>Remarks</strong></label>
                                     {{$prescription->remarks}}
                                 </div>
-                            <br>
+                            <br><br>
 <div>
-    <label ><strong>Student's Statement</strong></label><br><br>
-    I hereby Declare the above information are true and accurate to the best of my knowledge
+    <label ><strong>....................</strong></label><br><br>
+    Dr.John Doe
 </div>
 <br><br><br>
 
