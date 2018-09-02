@@ -19,12 +19,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/drug-databsse/', 'PrescriptionController@getDrugDatabase')->name('drug-database');
+
 Route::get('/Prescriptions', 'PrescriptionController@getPrescription')->name('get-medical-prescription');
 
 Route::post('/Prescriptions', 'PrescriptionController@storePrescriptions')->name('get-medical-prescription');
 
 
 Route::get('/Prescriptions/{id}', 'PrescriptionController@generatePrescription')->name('generate-prescription');
+
+
+
 
 
 // Route::get( '/student/store-medical/generate-medical/{id}', 'StudentController@generateMedicalPDF' )->name( 'generate-medical' );

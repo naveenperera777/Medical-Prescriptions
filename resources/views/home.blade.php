@@ -11,6 +11,7 @@
 
                         <div class="list-group">
                         <a href="{{ route('get-medical-prescription') }}" class="list-group-item list-group-item-action">Generate a Prescription</a>
+                            <a href="{{ route('drug-database') }}" class="list-group-item list-group-item-action">Add A Drug Database</a>
                     </div>
     
                     {{-- <div class="list-group">

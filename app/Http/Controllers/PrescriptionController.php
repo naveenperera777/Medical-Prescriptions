@@ -15,6 +15,11 @@ class PrescriptionController extends Controller
         return view('Prescriptions.showPrescription');
     }
 
+    public function getDrugDatabase()
+    {
+        return view('Prescriptions.drugDatabase');
+    }
+
     public function storePrescriptions(Request $request){
 
         // dd($request->brand);
@@ -35,6 +40,8 @@ class PrescriptionController extends Controller
         $drugs = new PatientPrescription();
         $drugs->patient_id=$prescription->id;
         $drugs->brand = $request->brand;
+        $drugs->qty = $request->qty;
+        $drugs->mg = $request->mg;
         $drugs->save();
        
         $drugReport = PatientPrescription::where('patient_id','=', $prescription->id )->first();
